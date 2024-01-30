@@ -1,0 +1,28 @@
+{
+  "name": "16bitmoose.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/16BitMoose/16BitMoose.github.io.git"
+  },
+  "keywords": [
+    "ThreeJS"
+  ],
+  "author": "Sebastian Hydén",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/16BitMoose/16BitMoose.github.io/issues"
+  },
+  "homepage": "https://github.com/16BitMoose/16BitMoose.github.io#readme",
+  "dependencies": {
+    "three": "^0.160.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.12"
+  }
+}
