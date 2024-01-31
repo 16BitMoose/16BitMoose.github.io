@@ -1,6 +1,6 @@
-/*Color scheme*/
+/*Color scheme
 :root {
-}
+}/*
 
 /*
 * {
@@ -17,15 +17,3 @@
     display: none;
 }
 */
-
-/* Apply fonts */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lilita One', sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-}
-
-p, blockquote, pre, a {
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 2.8vh;
-}
