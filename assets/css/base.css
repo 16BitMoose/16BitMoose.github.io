@@ -1,8 +1,13 @@
-/*Color scheme
+/*Color scheme*/
 :root {
-}/*
+    --text: #000014;
+    --background: #fbfbfe;
+    --primary: #7FB658;
+    --secondary: #A0D5AD;
+    --accent: #7EC69D;
+}
 
-/*
+/* Reset basic styling */
 * {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -16,4 +21,15 @@
 *::-webkit-scrollbar {
     display: none;
 }
-*/
+
+/* Apply fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+p, blockquote, pre, a {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.3rem;
+}
