@@ -9,6 +9,7 @@
   <!--CSS-->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -26,50 +27,77 @@
     <div>
       <h1>MOOSE<br><span>Alces alces</span></h1>
       <a href="#habitat">EXPLORE</a>
-      <button onclick="PlaySound()">.</button>
     </div>
     <img src="assets/images/hero.jpg" loading="eager">
   </div>
   <nav>
-    <a href="#habitat">Habitat</a>
-    <a href="#anatomy">Anatomy</a>
-    <a href="#diet">Diet</a>
   </nav>
+  <section class="splide" aria-label="Splide Basic HTML Example">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="panel">
+            <div>
+              <h1>Habitat</h1>
+              <p>Moose inhabit diverse ecosystems, including boreal and deciduous forests, as well as marshes and
+                meadows. They thrive in regions with ample vegetation for browsing and are commonly found in North
+                America, Europe, and Asia.
+              </p>
+            </div>
+            <img src="assets/images/MooseMap.png" loading="lazy">
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="panel">
+            <img src="assets/images/Moose2.png" loading="lazy">
+            <div>
+              <h1>Anatomy</h1>
+              <p>Moose, the giants of the deer family, typically stand 1.8 to 2.1 meters at the shoulder. Adult males
+                weigh between 540 to 730 kilograms, while females are somewhat smaller. Their colossal size, accentuated
+                by impressive antlers in males, makes them a commanding presence in the diverse landscapes they inhabit,
+                marking them as true giants of the wild.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="panel">
+            <div>
+              <h1>Diet</h1>
+              <p>Moose sustain themselves with a diverse herbivorous diet, primarily consisting of aquatic plants,
+                shrubs, and trees. Their selective browsing includes willow, birch, and aquatic vegetation. While
+                predominantly herbivores, moose occasionally consume aquatic vegetation, showcasing their adaptability
+                in sourcing sustenance from the ecosystems they inhabit.
+              </p>
+            </div>
+            <img src="assets/images/Moose1.png" loading="lazy">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
   <div class="panel">
     <div>
-      <h1 id="habitat">Habitat</h1>
-      <p>Moose inhabit diverse ecosystems, including boreal and deciduous forests, as well as marshes and meadows. They
-        thrive in regions with ample vegetation for browsing and are commonly found in North America, Europe, and Asia.
+      <h1>History</h1>
+      <p>The moose, a symbol of strength and endurance in indigenous cultures, has a rich history. Found in North
+        America, Europe, and Asia, it's a keystone species shaping ecosystems. Historically, moose provided sustenance
+        and resources for indigenous and settler communities. Today, conservation efforts focus on preserving their
+        vital role in both nature and cultural heritage.
       </p>
     </div>
-    <img src="assets/images/MooseMap.png" loading="lazy">
-  </div>
-  <div class="panel">
-    <img src="assets/images/Moose2.png" loading="lazy">
-    <div>
-      <h1 id="anatomy">Anatomy</h1>
-      <p>Moose, the giants of the deer family, typically stand 1.8 to 2.1 meters at the shoulder. Adult males weigh
-        between 540 to 730 kilograms, while females are somewhat smaller. Their colossal size, accentuated by impressive
-        antlers in males, makes them a commanding presence in the diverse landscapes they inhabit, marking them as true
-        giants of the wild.
-      </p>
-    </div>
-  </div>
-  <div class="panel">
-    <div>
-      <h1 id="diet">Diet</h1>
-      <p>Moose sustain themselves with a diverse herbivorous diet, primarily consisting of aquatic plants, shrubs, and
-        trees. Their selective browsing includes willow, birch, and aquatic vegetation. While predominantly herbivores,
-        moose occasionally consume aquatic vegetation, showcasing their adaptability in sourcing sustenance from the
-        ecosystems they inhabit.
-      </p>
-    </div>
-    <img src="assets/images/Moose1.png" loading="lazy">
+    <img src="assets/images/albino.png" loading="lazy">
   </div>
   <footer>
     <p>©2024 Sebastian Hydén | All rights reserved</p>
   </footer>
-  <audio id="audio" src="assets/audio/moose.ogg" hidden></audio>
+  <script type="module" src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide('.splide', { type: 'loop', pagination: false, autoplay: true, interval: 8000, pauseOnHover: true });
+      splide.mount();
+      console.log('Splide mounted');
+    });
+  </script>
   <script src="assets/js/index.js"></script>
 </body>
 
